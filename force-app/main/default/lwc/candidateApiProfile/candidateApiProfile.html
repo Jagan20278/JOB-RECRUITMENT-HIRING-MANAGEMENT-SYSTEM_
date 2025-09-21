@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Fetch External Profile" icon-name="standard:user">
+        <div class="slds-m-around_medium">
+            <lightning-button
+                label="Fetch Profile Data"
+                variant="brand"
+                onclick={handleFetchProfile}>
+            </lightning-button>
+
+            <template if:true={profileData}>
+                <div class="slds-box slds-m-top_medium">
+                    <h2 class="slds-text-heading_small">API Response:</h2>
+                    <pre>{profileData}</pre>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <div class="slds-m-top_medium">
+                    <p>Error: {error}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

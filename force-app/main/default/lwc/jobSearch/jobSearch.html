@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Open Job Postings" icon-name="standard:case">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                label="Search by Job Title" 
+                type="search" 
+                onchange={handleKeyChange}>
+            </lightning-input>
+            
+            <lightning-button 
+                label="Search" 
+                variant="brand" 
+                onclick={handleSearch} 
+                class="slds-m-top_small">
+            </lightning-button>
+
+            <template if:true={jobs}>
+                <div class="slds-m-top_medium">
+                    <template for:each={jobs} for:item="job">
+                        <div key={job.Id} class="slds-box slds-m-bottom_small">
+                            <p><strong>Job Title:</strong> {job.Name}</p>
+                            <p><strong>Hiring Manager:</strong> {job.Hiring_Manager__r.Name}</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            
+            <template if:true={error}>
+                <p class="slds-m-top_medium">Error: {error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
