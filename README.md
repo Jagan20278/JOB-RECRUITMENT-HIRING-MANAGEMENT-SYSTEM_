@@ -84,4 +84,5 @@ Prepared a comprehensive, persona-driven demonstration of the finished applicati
 * **Developed** a step-by-step demo script that tells a story from multiple user perspectives.
 * **Prepared** sample data to ensure a smooth and visually compelling presentation.
 * **Summarized** the business value and technical skills demonstrated in each phase of the project.
+* DEMO VIDEO LINK : https://drive.google.com/file/d/1k7C0BdRdsMY5bm1sjTPiW-1R8fT9sogo/view?usp=drivesdk
 
